@@ -8,13 +8,10 @@ Please see the theme's README.md for information on how to override bootstrap if
 
 ======================================== */
 
-/* Include a google font for headers */
-@import url(https://fonts.googleapis.com/css?family=Rokkitt:700);
-
 /* Set background, to be overridden for other sections */
 body {
     background-color:#fff;
-    background-image: url("../images/seamless_paper_texture.png");
+    background-image: url("images/denim.png");
 }
 
 .main_content {
@@ -22,126 +19,199 @@ body {
     padding: 10px 0 60px 0
 }
 
-/* ==========
-Header
-=========== */
 
-.site_header {
-    background-image: url("../images/seamless_paper_texture.png");
-}
+/* Include a google font for headers */
+@import url(https://fonts.googleapis.com/css?family=Rokkitt:700);
+@import url(https://fonts.googleapis.com/css?family=Lato);
 
-.header_navbar {
-    background-color: RGBA(0,0,0,.7);
-    border: none;
-    margin-bottom: 0
-}
-
-.header_navbar a {
-    text-decoration:none;
-    color: #fff;
-}
-
-/* using .navbar-inverse rather than .header_navbar so
-it is specific enough to overwrite bootstrap rules */
-
-.navbar-inverse .navbar-nav>li>a {
-    color:#fff;
-}
-
-.navbar-inverse .navbar-nav>li>a:hover {
-    color:#9d9d9d;
-}
-
-h1.title {
-    font-family: 'Rokkitt', serif;
-    font-weight:700;
-    text-align:center;
-    font-size: 4em; /* note bigger size in media queries below */
-    margin:10px;
-    color:RGBA(0,0,0,.6);
-    text-shadow: 1px 4px 6px #E1DFD7, 0 0 0 #000, 1px 4px 6px #E1DFD7; /* fancy inner shadow */
-}
-
-/* ==========
-Footer
-=========== */
-
-#footer {
-    background-image: url("../images/seamless_paper_texture.png");
-    padding:20px 0 90px 0;
-    border-top: solid 1px #43423f;
-    margin-top: 0px
-}
-
-/* ==============
-Basic HTML
-============== */
-
-h1, h2, h3, h4, h5, h6 {
-    font-family: 'Rokkitt', serif;
-    font-weight:700;
-    line-height:1em;
-    color: #D14536;
-}
-
+/* Global */
 h1 {
-    font-size: 3.5em;
+   font-family: 'lato', sans-serif;
+   font-size: 24px;
+   color: #500000;
+   font-weight: bold;
+   margin: 0;
+   padding: 0;
 }
 
 h2 {
-    font-size: 3em;
+    font-size: 18px;
+    margin: 0;
+    padding: 0;
 }
 
 h3 {
-    font-size: 2.5em;
+   font-family: 'Lato-LightItalic', sans-serif;
+   font-size: 14px;
+   margin: 0;
+   padding: 0;
 }
 
-h4 {
-    font-size: 2em;
+.tamu-site-title {
+
 }
 
-h5 {
-    font-size: 1.5em;
+.tamu-site-title a {
+    color: #fff;
+    display: block;
+    padding: 5px 0 5px 55px;
+    margin: 10px 0;
+    font-size: 1em;
+    text-align: left;
+    background: url(//library.tamu.edu/assets/images/tam.png) no-repeat;
 }
 
-h6 {
-    font-size: 1.3em;
+.tamu-site-tabs {
+
 }
 
-a {
-    color: #296FB9;
-    text-decoration:underline;
+.tamu-site-tabs a {
+    margin: 8px ;
 }
 
-a:visited {
-    color: #865EB8;
+/* Custom CSS */
+.tamu-site-banner {
+    background: #500000;
+    border-top: 1px solid #8d8d8d;
+    /* box-shadow: 0 8px 6px -6px black; */
 }
 
-a:hover {
-    color: #D14536;
+.tamu-site-name {
+    /* color: #fff;
+    font-family: 'Lato', Arial, sans-serif;
+    text-align: left; */
+    margin: 20px 0px 20px 0;
 }
 
-/* Fix for calendar page, newer bigger base font makes calendars wrap */
-.calendar_wrapper {
-    font-size: 14px;
+.tamu-site-name a {
+    color: #ffffff;
+    text-decoration: none;
+    font-family: 'Lato', Arial, sans-serif;
+}
+    
+.tamu-site a:hover{
+    color:#ffc222;
 }
 
-/* Accessibility tweak to improve Bootstrap's default contrast */
-.help-block {
-    color: #333;
+.tamu-navbar {
+    border-radius: unset;
+    background-color: #4d4d4d;
+    border: unset;
+    margin-bottom: unset;
 }
 
-/* =============
-Breakpoints (Based on bootstrap defaults)
-============== */
+.navbar-inverse .navbar-nav li a {
+    color: #ffffff;
+}
 
-/* Small Devices, Tablets */
-@media only screen and (min-width : 768px) {
-    body {
-        font-size: 16px;
-    } /* Make font bigger when screens are bigger */
+.btn-tamu {
+    color: #fff;
+    background: #500000;
+    border-color: #ccc;
+    padding: 10px 20px 10px 18px;
+}
 
-    h1.title {
-        font-size: 7em;
-    } /* Make font bigger when screens are bigger */
+.btn-tamu:hover {
+    color: #444444;
+    background: #e6e6e6;
+}
+
+.form-inline .form-control {
+    width: 100%;
+    padding: 20px;
+    font-size: 18px;
+}
+
+.searchBox {
+    padding: 10px;
+    box-sizing: content-box;
+    background-color: #fcfcfc;
+    border-bottom: 1px solid #E8E5D4;
+}
+
+.advancedSearch {
+    margin-top: 10px;
+}
+
+.advancedSearch a {
+    color: #2b5d7d;
+    text-decoration: none;
+}
+
+.advancedSearch a:hover {
+    text-decoration: underline;
+}
+
+.footer-section {
+    background-color: #ededed;
+    border-top: 1px solid #a9a09a;
+    padding: 0;
+    position: relative;
+}
+
+.contribute-social-container {
+    background: #ebebeb;
+    display: block;
+    padding: 20px;
+}
+
+.contribute-col {
+    margin-top: 20px;
+}
+
+.contribute-text {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.social-col {
+
+}
+
+.social-text {
+    margin-top: 25px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.social-links {
+    margin-top: 20px;
+}
+
+.social-links ul li {
+    list-style: none;
+    display: inline-block;
+}
+
+.tamu-footer-container {
+    background: #4d4d4d;
+    color: #e3dfd5;
+    padding: 30px 0;
+}
+
+.tamu-footer-links {
+
+}
+
+.tamu-footer-links li {
+    list-style-type: none;
+    display: inline-block;
+    padding: 0 5px;
+}
+
+.tamu-footer-links a {
+    text-decoration: none;
+    color: #e3dfd5;
+}
+
+.tamu-footer-links a:hover {
+    text-decoration: underline;
+}
+
+
+
+.global-nav {
+    text-align: right;
+    padding: 0;
+    background: #3c0000;
 }

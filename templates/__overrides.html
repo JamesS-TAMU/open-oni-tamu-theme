@@ -22,4 +22,202 @@
   <meta name="description" content="A site for newspapers">
 {% endblock head_page_meta %}
 
+<!-- CSS -->
+{% block head_page_css %}
+{{ block.super }}
+  <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+  <link href="{% static 'css/main.css' %}" rel="stylesheet">
+{% endblock head_page_css %}
 
+<!-- Begin - Custom Header -->
+{% block header %}
+
+  {% block header_title %}
+    <div class="header_title">
+      
+      <section class="container-fluid global-nav">
+        <div class="container-fluid">
+            <div class="row">
+              <div class="col-md-8 navbar-left visible-md visible-lg hidden-xs hidden-sm tamu-site-title">
+                <a href="http://library.tamu.edu">Texas A&amp;M University Libraries</a>
+              </div>
+              <div class="col-md-4 visible-md visible-lg hidden-xs hidden-sm tamu-site-tabs">
+                <a class="btn btn-default" href="http://askus.library.tamu.edu/">Help</a>
+              </div>
+            </div>
+            <!-- <div class="nav global-nav visible-phone">
+                <div class="tabBorder"></div>
+                <div class="lib-link"><a href="http://library.tamu.edu">Texas A&amp;M University Libraries</a></div>
+            </div> -->
+        </div>
+      </section>
+      
+      <section class="container-fluid tamu-site-banner">
+        <div class="row">
+          <div class="col-lg-12 col-md-12 navbar-left visible-md visible-lg hidden-xs hidden-sm tamu-site-name">
+              <h1><a href="//newspaper.library.tamu.edu/">Texas A&amp;M Newspaper Collection</a></h1>
+          </div>
+        </div>
+      </section>
+    </div>
+  {% endblock header_title %}
+
+  {% block navbar %}
+  <nav class="navbar navbar-inverse tamu-navbar">
+    <div class="container-fluid">
+      {# Brand and toggle get grouped for better mobile display #}
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed"
+          aria-expanded="false" data-toggle="collapse"
+          data-target="#bs-example-navbar-collapse-1">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
+
+      {# Collect the nav links, forms, and other content for toggling #}
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+            {% block navbar_home %}
+              <li><a href="{% url 'openoni_home' %}">Home</a></li>
+            {% endblock navbar_home %}
+
+            {% block navbar_pos1 %}
+              <li><a href="{% url 'openoni_newspapers' %}">Newspapers</a></li>
+            {% endblock navbar_pos1 %}
+
+            {% block navbar_pos2 %}
+              <li><a href="{% url 'openoni_about' %}">About</a></li>
+            {% endblock navbar_pos2 %}
+
+            {% block navbar_pos3 %}
+              <li><a href="{% url 'openoni_issues' %}">Browse by Date</a></li>
+            {% endblock navbar_pos3 %}
+
+            {% block navbar_pos4 %}
+            <li><a href="{% url 'openoni_help' %}">Help</a></li>
+            {% endblock navbar_pos4 %}
+
+            {% block navbar_pos5 %}
+            {% endblock navbar_pos5 %}
+        </ul>
+      </div>{# /.navbar-collapse #}
+    </div>{# /.container-fluid #}
+  </nav>
+  {% endblock navbar %}
+
+  <div class="container-fluid searchBox">
+    <div class="row">
+      {% block navbar_search %}
+      <form class="form-inline col-lg-7 col-md-7 col-lg-offset-2" method="get"
+        action="{% url 'openoni_search_pages_results' %}" role="search">
+        <div class="form-group col-lg-10 col-md-10">
+          <input class="form-control" type="text" name="proxtext" aria-label="Search words"
+            placeholder="Search newspaper contents">
+        </div>
+    
+        <button type="submit" class="btn btn-tamu">
+          <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+          <span class="search_text">Search</span>
+        </button>
+      </form>
+      {% endblock navbar_search %}
+    
+      {% block navbar_advancedsearch %}
+      <div class="col-lg-2 col-md-2 advancedSearch">
+          <a href="{% url 'openoni_search_advanced' %}">Advanced Search</a>
+      </div>
+      {% endblock navbar_advancedsearch %}
+    </div>
+  </div>
+
+{% endblock header %}
+<!-- End - Custom Header -->
+
+<!-- Begin - Custom Footer -->
+{% block footer %}
+<footer class="col-lg-12 col-md-12 footer-section" role="contentInfo">
+  <div class="container contribute-social-container">
+    <div class="row ">
+
+      <!-- Left side newspaper icon. -->
+      <div class="col-lg-1 col-md-1 col-lg-offset-1 col-md-offset-1">
+        <img src="/static/images/newsIcon.png" alt="newspaper icon">
+      </div>
+
+      <!-- Mid section contribute text and button. -->
+      <div class="col-lg-6 col-md-6 contribute-col">
+        <div class="row giveText">
+          <div class="col-lg-8 col-md-8 contribute-text">
+            <span>Are you interested in including a title to our archive?</span> 
+          </div>
+          <div class="col-lg-4 col-md-4">
+            <a class="btn btn-large btn-tamu" href="/contribute/" role="button">Get Involved</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right side social media icons. -->
+      <div class="col-lg-3 col-md-3 col-lg-offset-1 col-md-offset-1 social-col">
+        <div class="row">
+          <!-- Follow Us text. -->
+          <div class="col-lg-6 col-md-6 social-text"><span>Follow us!</span></div>
+          
+          <!-- Social links column. -->
+          <div class="col-lg-6 col-md-6 social-links">
+            <ul>
+              <li>
+                <a href="https://www.facebook.com/tamulibraries">
+                  <img src="/static/images/facebook.png" alt="facebook logo">
+                </a>
+              </li>
+              <li>
+                <a href="https://www.youtube.com/user/tamulibrary">
+                    <img src="/static/images/youtube.png" alt="youtube logo">
+                </a>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+    <!-- End of row. -->
+  </div>
+  <!-- End of contribute-social-container. -->
+
+  <div class="tamu-footer-container text-center">
+    <div class="container">
+      <div class="row">
+
+        <!-- #bottom-logo end -->
+        <div class="col-lg-12 col-md-12 tamu-footer-links">
+          <ul>
+            <li><a href="https://howdy.tamu.edu">howdy.tamu.edu</a></li>
+            <li><a href="http://library.tamu.edu/services/tech_troubleshooting.html">Off-Campus Access</a></li>
+            <li><a href="http://www.tamu.edu">Texas A&amp;M University</a></li>
+            <li><a href="http://library.tamu.edu/compliance.html">Site Policies</a></li>
+            <li><a href="http://askus.library.tamu.edu/faq/220143?m=p">Accessibility</a></li>
+            <li><a href="http://www.thecb.state.tx.us/apps/txcrews/">Texas CREWS</a></li>
+            <li><a href="http://asktamulib.altarama.com/reft100.aspx?key=comments">Comments</a></li>
+          </ul>
+        </div>
+
+        <!-- .bottom-text end -->
+        <div class="clear"></div>
+        <p class="copyright vcard">© <span class="fn org">Texas A&amp;M University</span>, <span class="adr"> <span class="locality">College Station</span>, <span class="region">Texas</span> <span class="postal-code">77845</span></span>.&nbsp;&nbsp;
+      </p>
+      </div>
+        </div>
+    </div>
+  </div>
+</footer>
+{% endblock footer %}
+
+
+
+
+<!-- End - Custom Footer -->

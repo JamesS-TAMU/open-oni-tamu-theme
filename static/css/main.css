@@ -166,7 +166,6 @@ h3 {
 
 .contribute-text {
     font-weight: bold;
-    margin-top: 10px;
 }
 
 .social-col {
@@ -177,10 +176,12 @@ h3 {
     margin-top: 25px;
     font-size: 18px;
     font-weight: bold;
+    display: inline-block;
 }
 
 .social-links {
     margin-top: 20px;
+    display: inline-block;
 }
 
 .social-links ul li {
@@ -214,15 +215,61 @@ h3 {
 }
 
 
+/* Media Queries */
+/* screen-xs */
 @media (max-width: 767px) {
     .advancedSearch {
-        margin: 0 15px 0 15px
+        margin: 0 0 0 15px;
+    }
+
+    .advancedSearch a {
+        float: unset;
+    }
+
+    .contribute-text {
+        margin-top: 10px;
+    }
+
+    .social-col {
+        text-align: center;
     }
 }
 
+/* screen-sm */
 @media (min-width: 768px) and (max-width: 991px) {
     .advancedSearch {
-        margin: 0 15px 0 15px
+        padding-right: 10px;
+    }
+    
+    .advancedSearch a {
+        float: right;
+    }
+
+    .contribute-text {
+        margin-top: 10px;
+    }
+
+    .social-col {
+        text-align: center;
+    }
+}
+
+/* screem-md */
+@media (min-width: 992px) and (max-width: 1199px) {
+    .advancedSearch {
+        padding-right: 10px;
+    }
+    
+    .advancedSearch a {
+        float: right;
+    }
+
+    .contribute-col {
+        margin-left: 10px;
+    }
+
+    .contribute-text {
+        margin-top: unset;
     }
 }
 

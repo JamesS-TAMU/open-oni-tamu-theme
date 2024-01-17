@@ -35,14 +35,13 @@
   {% block header_title %}
     <div class="header_title">
       
-      <!-- Site banner on larger screens. -->
       <section class="container-fluid tamu-top-banner">
         <div class="container-fluid">
             <div class="row">
-              <div class="col-lg-8 col-md-8 navbar-left visible-md visible-lg hidden-xs hidden-sm tamu-site-title">
+              <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8 navbar-left tamu-site-title">
                 <a href="http://library.tamu.edu">Texas A&amp;M University Libraries</a>
               </div>
-              <div class="col-lg-4 col-md-4 visible-md visible-lg hidden-xs hidden-sm tamu-top-banner-buttons">
+              <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 tamu-top-banner-buttons">
                 <a class="btn btn-default" href="http://askus.library.tamu.edu/">Help</a>
               </div>
             </div>
@@ -51,32 +50,11 @@
       
       <section class="container-fluid tamu-site-name-banner">
         <div class="row">
-          <div class="col-lg-12 col-md-12 navbar-left visible-md visible-lg hidden-xs hidden-sm tamu-site-name">
+          <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 navbar-left tamu-site-name">
               <h1><a href="//newspaper.library.tamu.edu/">Texas A&amp;M Newspaper Collection</a></h1>
           </div>
         </div>
       </section>
-      <!-- End - Site banner on larger screens. -->
-
-      <!-- Site banner on smaller screens.  -->
-      <section class="container-fluid tamu-top-banner">
-        <div class="container-fluid">
-            <div class="row">
-              <div class="col-sm-12 col-xs-12 navbar-left hidden-lg hidden-md visible-sm visible-xs tamu-site-title-mobile">
-                <a href="http://library.tamu.edu">Texas A&amp;M University Libraries</a>
-              </div>
-            </div>
-        </div>
-      </section>
-      
-      <section class="container-fluid tamu-site-name-banner">
-        <div class="row">
-          <div class="col-sm-12 col-xs-12 navbar-left hidden-lg hidden-md visible-sm visible-xs tamu-site-name-mobile">
-              <h1><a href="//newspaper.library.tamu.edu/">Texas A&amp;M Newspaper Collection</a></h1>
-          </div>
-        </div>
-      </section>
-      <!-- End - Site banner on smaller screens.  -->
 
     </div>
   {% endblock header_title %}
@@ -130,9 +108,9 @@
   <div class="container-fluid searchBox">
     <div class="row">
       {% block navbar_search %}
-      <form class="form-inline col-lg-7 col-md-7 col-lg-offset-2 col-md-offset-2 col-sm-12 col-xs-12" method="get"
+      <form class="form-inline col-lg-6 col-md-6 col-lg-offset-3 col-md-offset-3 col-sm-10 col-sm-offset-2 col-xs-12" method="get"
         action="{% url 'openoni_search_pages_results' %}" role="search">
-        <div class="form-group col-lg-10 col-md-10 col-sm-8 col-xs-8">
+        <div class="form-group col-lg-8 col-md-8 col-sm-8 col-xs-8">
           <input class="form-control" type="text" name="proxtext" aria-label="Search words"
             placeholder="Search newspaper contents">
         </div>
@@ -145,7 +123,7 @@
       {% endblock navbar_search %}
     
       {% block navbar_advancedsearch %}
-      <div class="col-lg-3 col-md-3 advancedSearch">
+      <div class="col-lg-2 col-md-2 col-sm-10 col-xs-10 advancedSearch">
           <a href="{% url 'openoni_search_advanced' %}">Advanced Search</a>
       </div>
       {% endblock navbar_advancedsearch %}
@@ -157,35 +135,35 @@
 
 <!-- Begin - Custom Footer -->
 {% block footer %}
-<footer class="col-lg-12 col-md-12 footer-section" role="contentInfo">
+<footer class="col-lg-12 col-md-12 col-sm-12 col-xs-12 footer-section" role="contentInfo">
   <div class="container contribute-social-container">
     <div class="row ">
 
       <!-- Left side newspaper icon. -->
-      <div class="col-lg-1 col-md-1 col-lg-offset-1 col-md-offset-1">
+      <div class="col-lg-1 col-lg-offset-1 col-md-1 col-md-offset-1 col-sm-2 col-xs-2">
         <img src="/static/images/newsIcon.png" alt="newspaper icon">
       </div>
 
       <!-- Mid section contribute text and button. -->
-      <div class="col-lg-6 col-md-6 contribute-col">
-        <div class="row giveText">
-          <div class="col-lg-8 col-md-8 contribute-text">
+      <div class="col-lg-6 col-md-5 col-sm-10 col-xs-10 contribute-col">
+        <!-- <div class="row giveText"> -->
+          <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8 contribute-text">
             <span>Are you interested in including a title to our archive?</span> 
           </div>
-          <div class="col-lg-4 col-md-4">
+          <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
             <a class="btn btn-large btn-tamu" href="/contribute/" role="button">Get Involved</a>
           </div>
-        </div>
+        <!-- </div> -->
       </div>
 
       <!-- Right side social media icons. -->
-      <div class="col-lg-3 col-md-3 col-lg-offset-1 col-md-offset-1 social-col">
-        <div class="row">
+      <div class="col-lg-3 col-lg-offset-1 col-md-4 col-md-offset-0 col-sm-12 col-xs-12 social-col">
+        <!-- <div class="row"> -->
           <!-- Follow Us text. -->
-          <div class="col-lg-6 col-md-6 social-text"><span>Follow us!</span></div>
+          <div class="social-text"><span>Follow us!</span></div>
           
           <!-- Social links column. -->
-          <div class="col-lg-6 col-md-6 social-links">
+          <div class="social-links">
             <ul>
               <li>
                 <a href="https://www.facebook.com/tamulibraries">
@@ -200,7 +178,7 @@
             </ul>
           </div>
 
-        </div>
+        <!-- </div> -->
       </div>
 
     </div>

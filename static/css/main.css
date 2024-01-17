@@ -30,25 +30,32 @@ h1 {
    font-size: 24px;
    color: #500000;
    font-weight: bold;
-   margin: 0;
-   padding: 0;
 }
 
 h2 {
     font-size: 18px;
-    margin: 0;
-    padding: 0;
 }
 
 h3 {
    font-family: 'Lato-LightItalic', sans-serif;
    font-size: 14px;
-   margin: 0;
-   padding: 0;
 }
 
-.tamu-site-title {
 
+/* Custom CSS */
+.tamu-top-banner {
+    text-align: right;
+    padding: 0;
+    background: #3c0000;
+}
+
+.tamu-site-name-banner {
+    background: #500000;
+    border-top: 1px solid #8d8d8d;
+}
+
+.tamu-top-banner-buttons {
+    margin-top: 10px;
 }
 
 .tamu-site-title a {
@@ -61,18 +68,14 @@ h3 {
     background: url(//library.tamu.edu/assets/images/tam.png) no-repeat;
 }
 
-.tamu-site-tabs {
-
-}
-
-.tamu-site-tabs a {
-    margin: 8px ;
-}
-
-/* Custom CSS */
-.tamu-site-banner {
-    background: #500000;
-    border-top: 1px solid #8d8d8d;
+.tamu-site-title-mobile a {
+    color: #fff;
+    display: block;
+    padding: 5px 0 5px 55px;
+    margin: 10px 0;
+    font-size: 1em;
+    text-align: left;
+    background: url(//library.tamu.edu/assets/images/tam.png) no-repeat;
 }
 
 .tamu-site-name {
@@ -84,9 +87,15 @@ h3 {
     text-decoration: none;
     font-family: 'Lato', Arial, sans-serif;
 }
-    
-.tamu-site a:hover{
-    color:#ffc222;
+
+.tamu-site-name-mobile {
+    margin: 20px 0px 20px 0;
+}
+
+.tamu-site-name-mobile a {
+    color: #ffffff;
+    text-decoration: none;
+    font-family: 'Lato', Arial, sans-serif;
 }
 
 .tamu-navbar {
@@ -205,9 +214,15 @@ h3 {
 }
 
 
-
-.global-nav {
-    text-align: right;
-    padding: 0;
-    background: #3c0000;
+@media (max-width: 767px) {
+    .advancedSearch {
+        margin: 0 15px 0 15px
+    }
 }
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .advancedSearch {
+        margin: 0 15px 0 15px
+    }
+}
+

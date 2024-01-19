@@ -25,9 +25,15 @@
 <!-- CSS -->
 {% block head_page_css %}
 {{ block.super }}
-  <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+  <link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'>
   <link href="{% static 'css/main.css' %}" rel="stylesheet">
 {% endblock head_page_css %}
+
+<!-- jQuery -->
+{% block javascript %}
+  {{ block.super }}
+  <script src="/static/scripts/tamu.js"></script>
+{% endblock javascript %}
 
 <!-- Begin - Custom Header -->
 {% block header %}
@@ -90,11 +96,10 @@
             {% endblock navbar_pos2 %}
 
             {% block navbar_pos3 %}
-              <li><a href="{% url 'openoni_issues' %}">Browse by Date</a></li>
+              <li><a href="{% url 'openoni_help' %}">Help</a></li>
             {% endblock navbar_pos3 %}
 
             {% block navbar_pos4 %}
-            <li><a href="{% url 'openoni_help' %}">Help</a></li>
             {% endblock navbar_pos4 %}
 
             {% block navbar_pos5 %}

@@ -1,32 +1,24 @@
 /* =====================================
-
 Main stylesheet
 Default Theme
 
 This is where you will put all the styles for your site.
 Please see the theme's README.md for information on how to override bootstrap if needed.
-
 ======================================== */
 
-/* Set background, to be overridden for other sections */
+/* Global */
+
 body {
-    background-color:#fff;
-    /* background-image: url("images/denim.png"); */
+    background-color:#ffffff;
+    font-family: 'Open Sans', sans-serif;
 }
 
 .main_content {
-    background-color:#f7f6f2;
     padding: 10px 0 60px 0
 }
 
-
-/* Include a google font for headers */
-@import url(https://fonts.googleapis.com/css?family=Rokkitt:700);
-@import url(https://fonts.googleapis.com/css?family=Lato);
-
-/* Global */
 h1 {
-   font-family: 'lato', sans-serif;
+   font-family: 'Open Sans', sans-serif;
    font-size: 24px;
    color: #500000;
    font-weight: bold;
@@ -37,10 +29,23 @@ h2 {
 }
 
 h3 {
-   font-family: 'Lato-LightItalic', sans-serif;
+    font-family: 'Open Sans', sans-serif;
    font-size: 14px;
 }
 
+a {
+    color: #006483;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #004362;
+    text-decoration: underline;
+}
+
+.btn {
+    font-weight: bold;
+}
 
 /* Custom CSS */
 .tamu-top-banner {
@@ -51,25 +56,27 @@ h3 {
 
 .tamu-site-name-banner {
     background: #500000;
-    border-top: 1px solid #8d8d8d;
+    border-top: 1px solid #a7a7a7;
 }
 
 .tamu-top-banner-buttons {
     margin-top: 10px;
 }
 
-.tamu-site-title a {
-    color: #fff;
+.tamu-site-title a, .tamu-site-title a:hover {
+    color: #ffffff;
     display: block;
     padding: 5px 0 5px 55px;
     margin: 10px 0;
     font-size: 1em;
     text-align: left;
     background: url(//library.tamu.edu/assets/images/tam.png) no-repeat;
+    text-decoration: none;
+    font-weight: bold;
 }
 
 .tamu-site-title-mobile a {
-    color: #fff;
+    color: #ffffff;
     display: block;
     padding: 5px 0 5px 55px;
     margin: 10px 0;
@@ -79,13 +86,14 @@ h3 {
 }
 
 .tamu-site-name {
-    margin: 20px 0px 20px 0;
+    margin-top: 10px;
+    margin-bottom: 20px;
 }
 
-.tamu-site-name a {
+.tamu-site-name a, .tamu-site-name a:hover {
     color: #ffffff;
     text-decoration: none;
-    font-family: 'Lato', Arial, sans-serif;
+    font-family: 'Open Sans', Arial, sans-serif;
 }
 
 .tamu-site-name-mobile {
@@ -95,14 +103,14 @@ h3 {
 .tamu-site-name-mobile a {
     color: #ffffff;
     text-decoration: none;
-    font-family: 'Lato', Arial, sans-serif;
+    font-family: 'Open Sans', Arial, sans-serif;
 }
 
 .tamu-navbar {
-    border-radius: unset;
-    background-color: #4d4d4d;
-    border: unset;
-    margin-bottom: unset;
+    border-radius: 0;
+    background-color: #3e3e3e;
+    border: none;
+    margin-bottom: 0;
 }
 
 .navbar-inverse .navbar-nav li a {
@@ -110,15 +118,15 @@ h3 {
 }
 
 .btn-tamu {
-    color: #fff;
+    color: #ffffff;
     background: #500000;
-    border-color: #ccc;
+    border-color: #a7a7a7;
     padding: 10px 20px 10px 18px;
 }
 
 .btn-tamu:hover {
-    color: #444444;
-    background: #e6e6e6;
+    color: #333333;
+    background: #f6f6f6;
 }
 
 .form-inline .form-control {
@@ -130,32 +138,33 @@ h3 {
 .searchBox {
     padding: 10px;
     box-sizing: content-box;
-    background-color: #fcfcfc;
-    border-bottom: 1px solid #E8E5D4;
+    background-color: #f6f6f6;
+    border-bottom: 1px solid #d1d1d1;
 }
 
 .advancedSearch {
     margin-top: 10px;
+    font-weight: bold;
 }
 
 .advancedSearch a {
-    color: #2b5d7d;
+    color: #006483;
     text-decoration: none;
 }
 
 .advancedSearch a:hover {
+    color: #004362;
     text-decoration: underline;
 }
 
 .footer-section {
-    background-color: #ededed;
-    border-top: 1px solid #a9a09a;
+    background-color: #f6f6f6;
+    border-top: 1px solid #a7a7a7;
     padding: 0;
     position: relative;
 }
 
 .contribute-social-container {
-    background: #ebebeb;
     display: block;
     padding: 20px;
 }
@@ -190,8 +199,8 @@ h3 {
 }
 
 .tamu-footer-container {
-    background: #4d4d4d;
-    color: #e3dfd5;
+    background: #3e3e3e;
+    color: #D6D3C4;
     padding: 30px 0;
 }
 
@@ -207,12 +216,20 @@ h3 {
 
 .tamu-footer-links a {
     text-decoration: none;
-    color: #e3dfd5;
+    color: #D6D3C4;
 }
 
 .tamu-footer-links a:hover {
     text-decoration: underline;
 }
+
+
+/* Begin - Newspapers Page */
+.tamu-newspapers-page-title {
+    
+}
+/* End - Newspapers Page */
+
 
 
 /* Media Queries */
@@ -223,7 +240,7 @@ h3 {
     }
 
     .advancedSearch a {
-        float: unset;
+        float: none;
     }
 
     .social-col {
@@ -265,7 +282,7 @@ h3 {
     }
 
     .contribute-text {
-        margin-top: unset;
+        margin-top: 0;
     }
 }
 

@@ -7,7 +7,6 @@ Please see the theme's README.md for information on how to override bootstrap if
 ======================================== */
 
 /* Global */
-
 body {
     background-color:#ffffff;
     font-family: 'Open Sans', sans-serif;
@@ -46,6 +45,12 @@ a:hover {
 .btn {
     font-weight: bold;
 }
+
+.btn-link {
+    color: #006483;
+}
+
+
 
 /* Custom CSS */
 .tamu-top-banner {
@@ -224,13 +229,45 @@ a:hover {
 }
 
 
-/* Begin - Newspapers Page */
-.tamu-newspapers-page-title {
-    
+/* Begin - Newspapers Page (title.html and __l_newspaper.html */
+.tamu-newspaper-page-title {
+
 }
+
+#newspaper_nav  {
+    margin-bottom: 20px;
+    margin-left: 15px;
+}
+
+.tamu-nav-tabs li.active a {
+    color: #3C0000;
+    cursor: default;
+    background-color: #ffffff;
+    border: 1px solid #d1d1d1;
+    border-bottom-color: transparent;
+    font-weight: bold;
+}
+
+.tamu-nav-tabs li a {
+    font-weight: bold;
+}
+
+.tamu-nav-tabs li a:hover {
+    margin-right: 2px;
+    line-height: 1.42857143;
+    border: 1px solid transparent;
+    border-radius: 4px 4px 0 0;
+    background-color: #f6f6f6;
+}
+
 /* End - Newspapers Page */
 
-
+/* Begin - Advanced Search Page (search_advanced.html) */
+.tamu-adv-search-actions {
+    margin-top: 20px;
+    text-align: right;
+}
+/* End - Advanced Search Page (search_advanced.html) */
 
 /* Media Queries */
 /* screen-xs */

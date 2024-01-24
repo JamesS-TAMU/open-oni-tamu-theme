@@ -42,6 +42,10 @@ a:hover {
     text-decoration: underline;
 }
 
+canvas {
+    filter: grayscale(1) brightness(1);
+}
+
 .btn {
     font-weight: bold;
 }
@@ -58,14 +62,6 @@ a:hover {
 
 .tamu-hr {
     margin-bottom: 30px;
-}
-
-img {
-    width: 100%;
-}
-
-img, canvas {
-    filter: grayscale(1) brightness(1);
 }
 
 /* Custom CSS */
@@ -244,7 +240,10 @@ img, canvas {
     text-decoration: underline;
 }
 
-
+.highlight_words img {
+    filter: grayscale(1) brightness(1);
+    width: 100%;
+} 
 
 /* Begin - Newspapers Page (title.html and __l_newspaper.html */
 .tamu-newspaper-page-title {

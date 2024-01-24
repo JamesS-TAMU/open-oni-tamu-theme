@@ -46,11 +46,19 @@ a:hover {
     font-weight: bold;
 }
 
+.btn-default {
+    color: #333333;
+    background-color: #ffffff;
+    border-color: #d1d1d1;
+}
+
 .btn-link {
     color: #006483;
 }
 
-
+.tamu-hr {
+    margin-bottom: 30px;
+}
 
 /* Custom CSS */
 .tamu-top-banner {
@@ -262,6 +270,47 @@ a:hover {
 
 /* End - Newspapers Page */
 
+/* Begin - issue_pages.html. (View Front Pages) and page.html */
+.tamu-view-front-pages-page-info {
+    margin-top: 5px;
+    text-align: center;
+}
+
+.highlite img {
+    width: 100%;
+    height: 350px;
+    border: 1px solid #d1d1d1;
+    border-radius: 4px;
+}
+
+.search_results_ctrl {
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+.item-foot {
+    margin-top: 5px;
+}
+
+.image_credit {
+    font-weight: bold;
+    margin: 0;
+}
+
+.page_about {
+    font-weight: bold;
+}
+
+.search_results row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.tamu-front-page-item {
+
+}
+/* End - issue_pages.html. (View Front Pages) and page.html */
+
 /* Begin - Advanced Search Page (search_advanced.html) */
 .tamu-adv-search-actions {
     margin-top: 20px;
@@ -283,6 +332,19 @@ a:hover {
     .social-col {
         text-align: center;
     }
+
+    .item-foot {
+        margin-top: 50px;
+        float: right;
+    }
+
+    .tamu-front-page-item {
+        margin-top: 20px;
+    }
+
+    .highlite img {
+        height: 370px;
+    }
 }
 
 /* screen-sm */
@@ -301,6 +363,14 @@ a:hover {
 
     .social-col {
         text-align: center;
+    }
+
+    .tamu-front-page-item {
+        margin-top: 20px;
+    }
+
+    .highlite img {
+        height: 500px;
     }
 }
 

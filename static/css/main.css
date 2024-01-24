@@ -42,7 +42,7 @@ a:hover {
     text-decoration: underline;
 }
 
-canvas {
+canvas, .thumbnail {
     filter: grayscale(1) brightness(1);
 }
 

@@ -240,7 +240,7 @@ canvas, .thumbnail {
     text-decoration: underline;
 }
 
-.highlight_words img {
+.highlight_words img, .highlite img {
     filter: grayscale(1) brightness(1);
     width: 100%;
 } 

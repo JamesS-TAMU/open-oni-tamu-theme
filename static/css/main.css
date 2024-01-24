@@ -60,6 +60,10 @@ a:hover {
     margin-bottom: 30px;
 }
 
+img {
+    width: 100%;
+}
+
 img, canvas {
     filter: grayscale(1) brightness(1);
 }
@@ -239,6 +243,7 @@ img, canvas {
 .tamu-footer-links a:hover {
     text-decoration: underline;
 }
+
 
 
 /* Begin - Newspapers Page (title.html and __l_newspaper.html */

@@ -60,6 +60,10 @@ a:hover {
     margin-bottom: 30px;
 }
 
+img, canvas {
+    filter: grayscale(1) brightness(1);
+}
+
 /* Custom CSS */
 .tamu-top-banner {
     text-align: right;

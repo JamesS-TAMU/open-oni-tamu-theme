@@ -64,12 +64,31 @@ canvas, .thumbnail {
     margin-bottom: 30px;
 }
 
-.pagination>.active>a {
+.pagination .active a {
     color: #ffffff;
     background-color: #500000;
     border-color: #500000;
 }
 
+.pagination .active a:hover {
+    color: #ffffff;
+    background-color: #500000;
+    border-color: #500000;
+}
+
+.pagination .active a:hover {
+    background-color: #004362;
+    border-color: #004362;
+}
+
+.pagination li a {
+    font-weight: bold;
+}
+
+.pagination li a:hover {
+    color: #006483;
+    background-color: #f6f6f6;
+}
 
 /* Custom CSS */
 .tamu-top-banner {
@@ -153,13 +172,13 @@ canvas, .thumbnail {
     background: #f6f6f6;
 }
 
-.btn-pagination {
+.btn-primary {
     color: #ffffff;
-    background: #500000;
+    background-color: #500000;
     border-color: #a7a7a7;
 }
 
-.btn-pagination:hover {
+.btn-primary:hover {
     color: #333333;
     background: #f6f6f6;
 }

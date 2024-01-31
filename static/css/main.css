@@ -64,6 +64,13 @@ canvas, .thumbnail {
     margin-bottom: 30px;
 }
 
+.pagination>.active>a {
+    color: #ffffff;
+    background-color: #500000;
+    border-color: #500000;
+}
+
+
 /* Custom CSS */
 .tamu-top-banner {
     text-align: right;
@@ -142,6 +149,17 @@ canvas, .thumbnail {
 }
 
 .btn-tamu:hover {
+    color: #333333;
+    background: #f6f6f6;
+}
+
+.btn-pagination {
+    color: #ffffff;
+    background: #500000;
+    border-color: #a7a7a7;
+}
+
+.btn-pagination:hover {
     color: #333333;
     background: #f6f6f6;
 }

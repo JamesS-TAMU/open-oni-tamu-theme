@@ -96,10 +96,11 @@
             {% endblock navbar_pos2 %}
 
             {% block navbar_pos3 %}
-              <li><a href="{% url 'openoni_help' %}">Help</a></li>
+              <li><a href="{% url 'static_pages_page' 'contribute' %}">Contribute</a></li>
             {% endblock navbar_pos3 %}
 
             {% block navbar_pos4 %}
+              <li><a href="{% url 'openoni_help' %}">Help</a></li>
             {% endblock navbar_pos4 %}
 
             {% block navbar_pos5 %}
@@ -218,8 +219,5 @@
   </div>
 </footer>
 {% endblock footer %}
-
-
-
 
 <!-- End - Custom Footer -->

@@ -36,6 +36,17 @@
 {% endblock javascript %}
 
 <!-- Begin - Custom Header -->
+
+<!-- Custom page title -->
+{% block page_head %}
+  {% block sub_page_head %}
+    {% if page_title %}
+      <h1>{{ page_title }}</h1>
+    {% endif %}
+  {% endblock sub_page_head %}
+{% endblock page_head%}
+
+
 {% block header %}
 
   {% block header_title %}

@@ -42,8 +42,12 @@ a:hover {
     text-decoration: underline;
 }
 
-canvas, .thumbnail {
+canvas {
     filter: grayscale(1) brightness(1);
+}
+
+.thumbnail {
+
 }
 
 .btn {

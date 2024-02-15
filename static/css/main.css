@@ -245,11 +245,17 @@ canvas, .thumbnail {
 .social-links {
     margin-top: 20px;
     display: inline-block;
+    font-size: 1.5em;
 }
 
 .social-links ul li {
     list-style: none;
     display: inline-block;
+    padding-right: 5px;
+}
+
+.fa-brands {
+    color: #500000;
 }
 
 .tamu-footer-container {
@@ -281,6 +287,10 @@ canvas, .thumbnail {
     filter: grayscale(1) brightness(1);
     width: 100%;
 } 
+
+.help-page-text {
+    margin: 20px 0 20px 0;
+}
 
 /* Begin - Newspapers Page (title.html and __l_newspaper.html */
 .tamu-newspaper-page-title {

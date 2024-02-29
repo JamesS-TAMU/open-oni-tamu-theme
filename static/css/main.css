@@ -6,7 +6,7 @@ This is where you will put all the styles for your site.
 Please see the theme's README.md for information on how to override bootstrap if needed.
 ======================================== */
 
-/* Global */
+/* Global - Begin */
 body {
     background-color:#ffffff;
     font-family: 'Open Sans', sans-serif;
@@ -89,8 +89,9 @@ canvas, .tamu-title-thumbnail {
     color: #006483;
     background-color: #f6f6f6;
 }
+/* Global - End */
 
-/* Custom CSS */
+/* Custom CSS - Begin */
 .tamu-top-banner {
     text-align: right;
     padding: 0;
@@ -291,6 +292,17 @@ canvas, .tamu-title-thumbnail {
 .help-page-text {
     margin: 20px 0 20px 0;
 }
+
+/* Custom CSS - End */
+
+/* Begin - About page */
+.about-page-section-title {
+    font-family: 'Open Sans', sans-serif;
+    color: #500000;
+    font-weight: bold;
+    margin-top: 40px;
+}
+/* End - About page  */
 
 /* Begin - Newspapers Page (title.html and __l_newspaper.html */
 .tamu-newspaper-page-title {

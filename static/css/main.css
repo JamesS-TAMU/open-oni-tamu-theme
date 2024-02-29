@@ -161,7 +161,7 @@ canvas, .tamu-title-thumbnail {
     color: #ffffff;
 }
 
-.btn-tamu {
+.btn-tamu, .btn-tamu:focus {
     color: #ffffff;
     background: #500000;
     border-color: #a7a7a7;

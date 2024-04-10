@@ -57,11 +57,11 @@
                     <td class="first left_no_border" scope="row">
                         <a href="{% url 'openoni_title' title.lccn %}">{{title.display_name}}</a>
                     </td>
-                    <td>
+                    <!-- <td>
                         {% for place in title.places.all %}
                             {{ place.get_city_county }}<br/>
                         {% endfor %}
-                    </td>
+                    </td> -->
                     <td>{{title.place_of_publication}}, {{title.start_year}}-{{title.end_year}}</td>
                     <td><a href="{% url 'openoni_issues_title' title.lccn %}" shape="rect"><img src="{% static 'images/calendar_icon.gif' %}" alt="calendar"/></a></td>
                     <td>{{title.issues.count}}</td>

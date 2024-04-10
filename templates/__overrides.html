@@ -56,120 +56,110 @@
 {% endblock page_head%}
 
 
-{% block body_content %}
-  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-58KBZJLX"
-  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-58KBZJLX"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript> -->
   
-  <header class="site_header">
-    {# Skip link before all other content #}
-    <a class="skiplink sr-only sr-only-focusable" href="#maincontent">
-      Skip to main content
-    </a>
+{% block header %}
 
-    {% block header %}
-
-      {% block header_title %}
-        <div class="header_title">
-          
-          <section class="container-fluid tamu-top-banner">
-            <div class="container-fluid">
-                <div class="row">
-                  <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8 navbar-left tamu-site-title">
-                    <a href="http://library.tamu.edu">Texas A&amp;M University Libraries</a>
-                  </div>
-                  <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 tamu-top-banner-buttons">
-                    <a class="btn btn-default" href="http://askus.library.tamu.edu/">Help</a>
-                  </div>
-                </div>
-            </div>
-          </section>
-          
-          <section class="container-fluid tamu-site-name-banner">
+  {% block header_title %}
+    <div class="header_title">
+      
+      <section class="container-fluid tamu-top-banner">
+        <div class="container-fluid">
             <div class="row">
-              <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 navbar-left tamu-site-name">
-                  <h1><a href="//newspaper.library.tamu.edu/">Texas A&amp;M Newspaper Collection</a></h1>
+              <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8 navbar-left tamu-site-title">
+                <a href="http://library.tamu.edu">Texas A&amp;M University Libraries</a>
+              </div>
+              <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 tamu-top-banner-buttons">
+                <a class="btn btn-default" href="http://askus.library.tamu.edu/">Help</a>
               </div>
             </div>
-          </section>
-
         </div>
-      {% endblock header_title %}
-
-      {% block navbar %}
-      <nav class="navbar navbar-inverse tamu-navbar">
-        <div class="container-fluid">
-          {# Brand and toggle get grouped for better mobile display #}
-          <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed"
-              aria-expanded="false" data-toggle="collapse"
-              data-target="#bs-example-navbar-collapse-1">
-              <span class="sr-only">Toggle navigation</span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
-          </div>
-
-          {# Collect the nav links, forms, and other content for toggling #}
-          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav">
-                {% block navbar_home %}
-                  <li><a href="{% url 'openoni_home' %}">Home</a></li>
-                {% endblock navbar_home %}
-
-                {% block navbar_pos1 %}
-                  <li><a href="{% url 'openoni_newspapers' %}">Newspapers</a></li>
-                {% endblock navbar_pos1 %}
-
-                {% block navbar_pos2 %}
-                  <li><a href="{% url 'openoni_about' %}">About</a></li>
-                {% endblock navbar_pos2 %}
-
-                {% block navbar_pos3 %}
-                  <li><a href="{% url 'static_pages_page' 'contribute' %}">Contribute</a></li>
-                {% endblock navbar_pos3 %}
-
-                {% block navbar_pos4 %}
-                  <li><a href="{% url 'openoni_help' %}">Help</a></li>
-                {% endblock navbar_pos4 %}
-
-                {% block navbar_pos5 %}
-                {% endblock navbar_pos5 %}
-            </ul>
-          </div>{# /.navbar-collapse #}
-        </div>{# /.container-fluid #}
-      </nav>
-      {% endblock navbar %}
-
-      <div class="container-fluid searchBox">
+      </section>
+      
+      <section class="container-fluid tamu-site-name-banner">
         <div class="row">
-          {% block navbar_search %}
-          <form class="form-inline col-lg-6 col-md-6 col-lg-offset-3 col-md-offset-3 col-sm-10 col-sm-offset-2 col-xs-12" method="get"
-            action="{% url 'openoni_search_pages_results' %}" role="search">
-            <div class="form-group col-lg-8 col-md-8 col-sm-8 col-xs-8">
-              <input class="form-control" type="text" name="proxtext" aria-label="Search words"
-                placeholder="Search newspaper contents">
-            </div>
-        
-            <button type="submit" class="btn btn-tamu">
-              <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
-              <span class="search_text">Search</span>
-            </button>
-          </form>
-          {% endblock navbar_search %}
-        
-          {% block navbar_advancedsearch %}
-          <div class="col-lg-2 col-md-2 col-sm-10 col-xs-10 advancedSearch">
-              <a href="{% url 'openoni_search_advanced' %}">Advanced Search</a>
+          <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 navbar-left tamu-site-name">
+              <h1><a href="//newspaper.library.tamu.edu/">Texas A&amp;M Newspaper Collection</a></h1>
           </div>
-          {% endblock navbar_advancedsearch %}
         </div>
+      </section>
+
+    </div>
+  {% endblock header_title %}
+
+  {% block navbar %}
+  <nav class="navbar navbar-inverse tamu-navbar">
+    <div class="container-fluid">
+      {# Brand and toggle get grouped for better mobile display #}
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed"
+          aria-expanded="false" data-toggle="collapse"
+          data-target="#bs-example-navbar-collapse-1">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
       </div>
 
-    {% endblock header %}
-  </header>
+      {# Collect the nav links, forms, and other content for toggling #}
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+            {% block navbar_home %}
+              <li><a href="{% url 'openoni_home' %}">Home</a></li>
+            {% endblock navbar_home %}
 
-{% endblock body_content %}
+            {% block navbar_pos1 %}
+              <li><a href="{% url 'openoni_newspapers' %}">Newspapers</a></li>
+            {% endblock navbar_pos1 %}
+
+            {% block navbar_pos2 %}
+              <li><a href="{% url 'openoni_about' %}">About</a></li>
+            {% endblock navbar_pos2 %}
+
+            {% block navbar_pos3 %}
+              <li><a href="{% url 'static_pages_page' 'contribute' %}">Contribute</a></li>
+            {% endblock navbar_pos3 %}
+
+            {% block navbar_pos4 %}
+              <li><a href="{% url 'openoni_help' %}">Help</a></li>
+            {% endblock navbar_pos4 %}
+
+            {% block navbar_pos5 %}
+            {% endblock navbar_pos5 %}
+        </ul>
+      </div>{# /.navbar-collapse #}
+    </div>{# /.container-fluid #}
+  </nav>
+  {% endblock navbar %}
+
+  <div class="container-fluid searchBox">
+    <div class="row">
+      {% block navbar_search %}
+      <form class="form-inline col-lg-6 col-md-6 col-lg-offset-3 col-md-offset-3 col-sm-10 col-sm-offset-2 col-xs-12" method="get"
+        action="{% url 'openoni_search_pages_results' %}" role="search">
+        <div class="form-group col-lg-8 col-md-8 col-sm-8 col-xs-8">
+          <input class="form-control" type="text" name="proxtext" aria-label="Search words"
+            placeholder="Search newspaper contents">
+        </div>
+    
+        <button type="submit" class="btn btn-tamu">
+          <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+          <span class="search_text">Search</span>
+        </button>
+      </form>
+      {% endblock navbar_search %}
+    
+      {% block navbar_advancedsearch %}
+      <div class="col-lg-2 col-md-2 col-sm-10 col-xs-10 advancedSearch">
+          <a href="{% url 'openoni_search_advanced' %}">Advanced Search</a>
+      </div>
+      {% endblock navbar_advancedsearch %}
+    </div>
+  </div>
+
+{% endblock header %}
 <!-- End - Custom Header -->
 
 <!-- Begin - Custom Footer -->

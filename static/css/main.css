@@ -43,7 +43,7 @@ a:hover {
 }
 
 canvas, .tamu-title-thumbnail {
-    filter: grayscale(1) brightness(1);
+    /*filter: grayscale(1) brightness(1);*/
 }
 
 .btn {
@@ -285,7 +285,7 @@ canvas, .tamu-title-thumbnail {
 }
 
 .highlight_words img, .highlite img {
-    filter: grayscale(1) brightness(1);
+    /*filter: grayscale(1) brightness(1);*/
     width: 100%;
 } 
 

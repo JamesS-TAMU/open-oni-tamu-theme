@@ -8,7 +8,7 @@
 <div class="page_search">
     <form action="{% url 'openoni_search_pages_results' %}" method="get" name="fulltext2" id="fulltext2">
         <fieldset>
-            <legend><h3>Search Terms</h2></legend>
+            <legend><h3 tabindex="0">Search Terms</h2></legend>
             <div class="row">
                 <div class="col-md-3">
                     <label for="id_ortext">{{ form.ortext.label }}</label>
@@ -44,8 +44,8 @@
         </fieldset>
 
         <fieldset>
-            <legend><h3>Proximity Search</h3></legend>
-            <p class="hint">
+            <legend><h3 tabindex="0">Proximity Search</h3></legend>
+            <p class="hint" tabindex="0">
                 Enter a list of words to search for, and the distance, in
                 words, they may be from each other in order to match.
             </p>
@@ -66,7 +66,7 @@
         </fieldset>
 
         <fieldset>
-            <legend><h3>Limit By:</h3></legend>
+            <legend><h3 tabindex="0">Limit By:</h3></legend>
             <!-- Locations and Dates -->
             <div class="row">
                 <div class="col-md-3 date_form">
@@ -91,10 +91,10 @@
         </fieldset>
 
         <!-- Newspapers / LCCNs -->
-        <h3>Search selected newspapers:</h3>
+        <h3 tabindex="0">Search selected newspapers:</h3>
         <hr>
         <div class="row">
-            <div class="help-block">
+            <div class="help-block" tabindex="0">
                 Hold Cmd/Ctrl key while clicking
                 to select and de-select multiple papers;
                 Search all papers if none selected
@@ -108,7 +108,7 @@
         </div>
 
         <!-- TODO make the below expandable / collapsible? -->
-        <h3>Additional Filters</h3>
+        <h3 tabindex="0">Additional Filters</h3>
         <hr>
         <div class="row">
             <div class="col-md-4">

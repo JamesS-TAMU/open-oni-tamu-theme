@@ -18,16 +18,18 @@
 {% block subcontent %}
 
 {% block result_count %}
-    {{ paginator.count }} result{% if paginator.count != 1 %}s{% endif %}
-    {% if english_search %}containing{% endif %}
-    {% for part in english_search %}
-      <strong>&ldquo;{{ part }}&rdquo;</strong>
-      {% if not forloop.last %}<em>and</em>{% endif %}
-    {% endfor %}
+    <div tabindex="0">
+      {{ paginator.count }} result{% if paginator.count != 1 %}s{% endif %}
+      {% if english_search %}containing{% endif %}
+      {% for part in english_search %}
+        <strong>&ldquo;{{ part }}&rdquo;</strong>
+        {% if not forloop.last %}<em>and</em>{% endif %}
+      {% endfor %}
+    </div>
 {% endblock result_count %}
 
 {% block search_page_filter_desc %}
-  <h3>Filters</h3>
+  <h3 tabindex="0">Filters</h3>
   <ul class="list-inline">
     {# Date filter from Advanced Search #}
     {% if request.GET.date1 or request.GET.date2 %}
